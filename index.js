@@ -6,7 +6,7 @@ connectToMongo();
 
 const app = express();
 app.use(cors()); // Using cors while working with api to call from webpage
-const port = 5000; // changed the port number because react app will run on port 3000 by default
+const port = process.env.PORT || 5000; // changed the port number because react app will run on port 3000 by default
 
 app.get("/", (req, res) => {
   res.send("Hello Antya");
