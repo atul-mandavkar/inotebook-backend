@@ -68,7 +68,7 @@ router.post(
     let success = false; // deciding variable is added for future use ( it show success or not in each response)
     const result = validationResult(req);
     if (!result.isEmpty()) {
-      return res.status(400).send({ success, errors: result.array() });
+      return res.status(400).send({ success, errors: "Invalid request result.array()" });
     }
 
     const { email, password } = req.body; // destructuring email and password from req.body
