@@ -6,7 +6,8 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const fetchUser = require("../middleware/fetchUser");
 
-const JWT_SECRET = "My name is Atul"; // this is example of jwt token secret signature which we should store in env.local or in config to keep it secrete ( here we donot saved in env.local for understanding the concept)
+//const JWT_SECRET = "My name is Atul"; // this is example of jwt token secret signature which we should store in env.local or in config to keep it secrete ( here we donot saved in env.local for understanding the concept)
+const JWT_SECRET = process.env.JWT_SECRET_CODE; // Making JWT_SECRET as env variable
 
 // route 1: Create a User using : POST "/api/auth/createUser"  and also doesn't require auth. where createUser is in api/auth
 // use post method instead of get method of router because of user data is shown in get method but not in post method.

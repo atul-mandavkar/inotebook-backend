@@ -1,6 +1,7 @@
 // This is a middleware function
 const jwt = require("jsonwebtoken");
-const JWT_SECRET = "My name is Atul"; // this is example of jwt token secret signature which we should store in env.local or in config to keep it secrete ( here we donot saved in env.local for understanding the concept)
+//const JWT_SECRET = "My name is Atul"; // this is example of jwt token secret signature which we should store in env.local or in config to keep it secrete ( here we donot saved in env.local for understanding the concept)
+const JWT_SECRET = process.env.JWT_SECRET_CODE; // Making JWT_SECRET as env variable
 
 const fetchUser = (req, res, next) => {
   // Get user from JWT token and add id to the req object
